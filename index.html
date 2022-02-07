@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My bs Project</title>
+  <!--Google font CDN-->
+  <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@300;400;600&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <!--Font awesome CDN-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!--Bootstrap CDN-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+      html{
+        scroll-behavior: smooth;
+      }
+      
+      body{
+      /* font-family: 'Handlee', cursive;*/
+        font-family: 'Montserrat', sans-serif;
+        
+      }
+
+      h1,h2,h3,h4,h5,h6{
+        font-family: 'Roboto', sans-serif;
+      }
+
+      /* header start */
+
+      .banner-container{
+        height: 60vh;
+      }
+
+
+      header{
+        background-image: url("images/img.jpg");
+        background-position: center center;
+        /* background-attachment: fixed;*/
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .navbar{
+        padding: 1% 5%;
+        background-color: #6c757d;
+      }
+      .navbar-icon{
+        color: white;
+      }
+      .nav-link{
+        color: white;
+        margin: 8px;
+        border-radius: 5px;
+        transition: .4s;
+      }
+
+      .nav-link:hover{
+        background: #2980b9;
+        color: white;
+        transform: scale(1.1);
+      }
+      .navbar-brand img{
+        width: 90px;
+        height: auto;
+      }
+      .banner-container h1{
+        font-size: 3.5rem;
+        background-color: rgba(7, 101, 189, 0.8);
+        padding: 10px 20px;
+        font-family: 'Handlee', cursive;
+        border-radius: 5px;
+      }
+
+      /* header end */
+
+      /*features start */
+
+      #features{
+        padding: 2% 4%;
+        background: #6c757d;
+        color: #fff;
+      }
+
+      .features-col{
+        border: 1px solid #999;
+        padding: 15px;
+        margin: 20px 0;
+        transition: .4s;
+      }
+      .features-col:hover{
+        transform: scale(.5.5);
+        box-shadow: 2px 6px 5px black;
+      }
+
+      .icon-style{
+        background: #aa3b;
+        color: white;
+        padding: 15px;
+        margin: 5px 0;
+      }
+      .afsar{
+        background-color: #6c757d;
+        border-radius: 3px;
+      }
+      /*features end */
+
+      .footer-section{
+        margin: 0 auto;
+      }
+
+      @media (max-width: 768px){
+        .nav-link{
+          background-color: #6c757d;
+        }
+        .banner-container h1{
+          font-size: 2.5rem;
+        }
+      }
+  </style>
+  
+</head>
+<body>
+
+  <div class="container">
+    <!--Header section start-->
+    <header>
+      <nav class="navbar navbar-expand-md">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span><i class="fas fa-bars navbar-icon"></i></span>
+        </button>
+        
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" alt="Logo">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-center text-md-left" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center text-md-left" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center text-md-left" href="#blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center text-md-left" href="#feedback">Feedback</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link text-center text-md-left" href="#contact">Contact</a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+
+      <section id="banner">
+        <div class="banner-container d-flex justify-content-center align-items-center">
+          <div class="banner-contents text-center">
+            <h1 class="font-weight-bolder text-white mb-5">Learn a New...</h1>
+            <button class="btn btn-lg btn-primary mr-3"><i class="fas fa-laptop-house mr-2 " onclick="location.href='#work'"></i> Work</button>
+            <button class="btn btn-lg btn-primary mr-3"> <i class="fab fa-youtube mr-2" onclick="window.open('https://www.facebook.com/afsarruddin')" class="request-callback"></i>Follow</button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <!--Header section end-->
+
+    <!--Main section start-->
+    <main>
+
+      <!--Features start-->
+
+      <section id="features" class="text-center">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-block d-lg-flex">
+            <div class="features-col ">
+              <i class="fas fa-hand-holding-usd fa-3x icon-style rounded-circle"></i>
+              <h5 class="font-weight-bold">Free to use</h5>
+              <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, praesentium. Nam iusto iste sunt praesentium beatae delectus in alias deleniti.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-md-6 d-block d-lg-flex">
+            <div class="features-col">
+              <i class="fas fa-hand-holding-usd fa-3x icon-style rounded-circle"></i>
+              <h5 class="font-weight-bold">Free to use</h5>
+              <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, praesentium. Nam iusto iste sunt praesentium beatae delectus in alias deleniti.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-md-6 d-block d-lg-flex">
+            <div class="features-col">
+              <i class="fas fa-hand-holding-usd fa-3x icon-style rounded-circle"></i>
+              <h5 class="font-weight-bold">Free to use</h5>
+              <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, praesentium. Nam iusto iste sunt praesentium.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-md-6 d-block d-lg-flex">
+            <div class="features-col">
+              <i class="fas fa-hand-holding-usd fa-3x icon-style rounded-circle"></i>
+              <h5 class="font-weight-bold">Free to use</h5>
+              <p class="small">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, praesentium. Nam iusto iste sunt praesentium.</p>
+            </div>
+        </div>
+
+      </section>
+
+      <!--Features end-->
+
+
+      <!--About me start-->
+      <section id="about" class="mt-5">
+        
+        <div class=" align-items-center afsar text-white p-3">
+            <div class="section text-center p-0 ">
+              <h3>About Me</h3>
+            </div>
+          <div class="row ">
+            
+            <div class="col-lg-5 col-md-6 text-center p-5 flex-shrink-0">
+              <img style="width: 250px;" class=" rounded-circle mr-3" src="images/afsar.jpg" alt="Afsar">
+            </div>
+            <div class="col-lg-7 col-md-6 flex-grow-1 m-0 ">
+              
+              <p class="text-justify p-3 m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea voluptatum ipsa. Ad assumenda consequuntur corrupti unde. Labore fugit iusto rem quia facere itaque quibusdam quisquam, architecto, aspernatur at molestias doloremque veniam eius. Illum esse dolores ullam ducimus rerum provident accusantium dolorem aliquid, repellat, saepe deserunt, repellendus velit libero reiciendis.</p>
+
+              <h6><p class=" p-3">Name: Afsar Uddin<br><br>Address: Shahamirpur, Kacharipa, Pangsha, Rajbari, Bangladesh, 7720<br><br>Email: afsarruddin@gmail.com<br><br>Phone: +8801737538828<br><br>Website: www.afsarbari.com </p></h6>
+              
+            </div>
+            
+          </div>
+        </div>
+      </section>
+      <!--About me end-->
+
+      <!--Toggleable section start-->
+      <div class="toggleable-section mt-5 bg-light border" id="blog">
+        <ul class="nav bg-secondary font-weight-bold">
+          <li class="nav-item "><a data-bs-toggle="tab" class=" active nav-link" href="#recent">Recent Post</a></li>
+          <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#favorite">Favorite Post</a></li>
+          <li class="nav-item"><a data-bs-toggle="tab" class="nav-link" href="#all">All Post</a></li>
+          
+        </ul>
+          <div class="tab-content">
+            <div class="tab-pane active p-3" id="recent">
+
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary ">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary ">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              
+            </div>
+          
+            <div class="tab-pane fade p-3" id="favorite">
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+            </div>
+            
+            <div class="tab-pane fade p-3" id="all">
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class="btn btn-secondary ">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+              <div class=" row blog-post mb-4 border p-1">
+                <div class="col-lg-3 col-md-4">
+                 <img style="height: auto;" src="images/img1.jpg" alt="Nature" class=" img-thumbnail ">
+                
+                </div>
+                <div class="col-lg-9 col-md-8 mt-2">
+                  <article class="blog-content">
+                    <h3 class="blog-heading">Blog 1</h3>
+                    <p class="blog-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et dicta laboriosam placeat quisquam minus molestias recusandae ...</p>
+                    <button type="submit" class=" btn btn-secondary ">Read More</button>
+                    
+                  </article>
+                </div>
+              </div>
+            
+            </div>
+            
+          
+        </div>
+      </div>
+      <!--Toggleable section end-->
+
+
+      <!--Review section start-->
+
+      <div class="customer-review bg-light mt-5 text-center" id="feedback">
+        <div class="title text-center bg-secondary mb-3">
+          <h3 class="font-weight-bolder text-white p-2" style="font-weight: bolder;">Feedback</h3>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <blockquote class="blockquote">
+              <i class=" text-secondary p-2 fa-3x fas fa-user-circle"></i>
+              <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non iste ducimus accusantium fugiat delectus!</p>
+              <footer class="blockquote-footer">
+                Afsar Uddin
+              </footer>
+            </blockquote>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <blockquote class="blockquote">
+              <i class="text-secondary p-2 fa-3x fas fa-user-circle"></i>
+              <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non iste ducimus accusantium fugiat delectus!</p>
+              <footer class="blockquote-footer">
+                Afsar Uddin
+              </footer>
+            </blockquote>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <blockquote class="blockquote">
+              <i class="text-secondary p-2 fa-3x fas fa-user-circle"></i>
+              <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non iste ducimus accusantium fugiat delectus!</p>
+              <footer class="blockquote-footer">
+                Afsar Uddin
+              </footer>
+            </blockquote>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <blockquote class="blockquote">
+              <i class="text-secondary p-2 fa-3x fas fa-user-circle"></i>
+              <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, non iste ducimus accusantium fugiat delectus!</p>
+              <footer-area class="blockquote-footer">
+                Afsar Uddin
+              </footer-area>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+
+      <!--Review section end-->
+
+
+       <!--form start-->
+
+
+
+       <div id="contact" class="mt-5 bg-secondary p-5"> 
+         <h2 class=" bg-secondary text-center text-white mb-5">Contact Me</h2> 
+         <form action="bg-dark" method="post" enctype="text/plain" class="was-validate"> 
+         
+              <div class=" mb-3 ">
+                <input type="text" class=" form-control" placeholder="First name" aria-label="First name" required> 
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name" required> 
+              </div>
+              <div class="form-floating mb-3"> 
+                <input type="email" class="form-control" id="emailInput" placeholder="Email address" required> 
+                
+              </div> 
+              <div class="form-floating"> 
+                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea" required></textarea> 
+                    
+              </div> 
+              <div class="mb-3 mt-3"> 
+                <div class="form-check form-check-inline"> 
+                  <input class="form-check-input" type="radio" id="male" name="gender"> 
+                  <label class="text-white form-check-label" for="male"> male </label>
+                </div> 
+                <div class="form-check form-check-inline"> 
+                  <input class="form-check-input" type="radio" id="male" name="gender"> 
+                  <label class="text-white form-check-label" for="female"> female </label> 
+                </div> 
+                <div class=" mt-3"> 
+                  <div class="form-check"> 
+                    <input class="form-check-input" type="checkbox" id="terms"> 
+                    <label class="form-check-label text-white" for="terms"> Accept terms and conditions </label> 
+                  </div> 
+                </div> 
+                </div> 
+                <div>
+                  <button class="btn btn-secondary " type="submit">Submit</button> 
+                </div>
+                </div>  
+               
+          </form>
+
+          <footer class="footer-section bg-dark p-2 ">
+            <div class="row p-3">
+              <div class="col-lg-6 text-center text-lg-left mb-2 ">
+                <p class="small mb-0 mt-1 text-white">&copy; Copyright Anisul Islam</p>
+              </div>
+              <div class="col-lg-6 text-center text-lg-right ">
+                <a href="#"><i class="mr-3 text-white fab fa-facebook"></i></a>
+                <a href="#"><i class="mr-3 text-white fab fa-instagram"></i></a>
+                <a href="#"><i class="mr-3 text-white fab fa-linkedin"></i></a>
+                <a href="#"><i class="mr-3 text-white fab fa-twitter"></i></a>
+                <a href="#"><i class="text-danger fas fa-arrow-circle-up"></i></a>
+              </div>
+            </div>
+          </footer>
+        </div>
+
+       <!--form end-->
+
+       
+
+    </main>
+
+    <!--Main section end-->
+
+    <!--Footer section start-->
+
+    
+
+    <!--Footer section end-->
+  
+  </div>
+
+
+  <!--Bootstrap, js, jquery CDN-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+</body>
+</html>
